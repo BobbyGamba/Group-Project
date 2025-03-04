@@ -81,7 +81,7 @@ scanf("%d", &x);
   if (x==1) {
     printf("You venture along the beach in search of some drift wood.\n");
     tme(15);
-   // printf("You venture away from the beach and towards the jungle.\n");
+   printf("You venture away from the beach and towards the jungle.\n");
   }
 
 return 0;
