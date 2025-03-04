@@ -2,9 +2,15 @@
 
 int main() {
 int x;
+char y[30];
+int i;
  
-///ASCII art of island
-printf("You awaken to the sounds of waves crashing on the beach\n");
+FILE * f=fopen("island.txt","r"); 
+    for (i = 0; i <=10; i++) {
+        fgets(y, 30, f);
+        printf("%s\n", y);
+    }
+ printf("You awaken to the sounds of waves crashing on the beach\n");
 printf("The water splashes on your face as the waves effortlessly throw you onto the shore\n");
 printf("You stumble too your feet trying to grasp the situation you find youself in\n");
 printf("Before you stands a forest of palm trees towering over you and to your sides a white sand beach that curves to an end you can't see\n");
