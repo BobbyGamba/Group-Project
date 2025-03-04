@@ -21,8 +21,10 @@ else if (x == 3) {
     printf("Overcome by emotions of grief and despair you fall to your knees and begin to cry. With tears\nrunning down your face you hear the sound of your own wailing echoing through the trees and bouncing back to you.\nThe twisting vines of the trees distorts the sound and it's almost as if the jungle is laughing at you\n");
 }
 else { 
-printf("Please enter a 1, 2, or 3);
+printf("Please enter a 1, 2, or 3");
 }
+printf("Accepting your new reality you sit back down on the beach when your adrenaline fianlly fades away, and hungry and thirst become your new focus\n");
+printf("These are your hunger and thirst levels. They will start at 100 points and you need to eat and drink to maintain them. If they fall too low\nyou will become weaker and unable to perform as many tasks and if either reach 0 you will die.\n");
 
 return 0;
 
