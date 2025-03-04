@@ -1,5 +1,35 @@
 #include <stdio.h>
 
+int tme(int min) {
+int index=0;
+int hours=14;
+  index= index+min;
+  if (index<10) {
+    printf("%d:0%d\n", hours, index);
+  }
+  else if (index<60) {
+    printf("%d:%d\n", hours, index);
+  }
+  else if (index==60) {
+    hours=hours+1;
+    index=0;
+    printf("%d:00\n", hours);
+  }
+  else {
+    while (index>60) {
+      index=index-60;
+      hours= hours+1;
+    }
+    if (index<10) {
+      printf("%d:0%d\n", hours, index);
+    }
+    else {
+      printf("%d:%d\n", hours, index);
+    }
+  }
+  return 0;
+}
+
 void clear() {
     while ( getchar() != '\n' );
 }
@@ -42,6 +72,17 @@ else if (x == 3) {
 }
 printf("Accepting your new reality you sit back down on the beach when your adrenaline fianlly fades away, and hungry and thirst become your new focus\n");
 printf("These are your hunger and thirst levels. They will start at 100 points and you need to eat and drink to maintain them. If they fall too low\nyou will become weaker and unable to perform as many tasks and if either reach 0 you will die.\n");
+
+    printf("1.Collect wood\n");
+printf("2. Build a shelter\n");
+printf("3. Find food\n");
+printf("4. Find water\n");
+scanf("%d", &x);
+  if (x==1) {
+    printf("You venture along the beach in search of some drift wood.\n");
+    tme(15);
+   // printf("You venture away from the beach and towards the jungle.\n");
+  }
 
 return 0;
 
