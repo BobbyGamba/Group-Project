@@ -35,8 +35,8 @@ void clear() {
 }
 
 int main() {
-int x;
-char y[30];
+int x, wood, wood_index, t, coconut=0;
+char y[30], choice1, choice2;
 int i;
 int rc;
  
@@ -73,18 +73,49 @@ else if (x == 3) {
 printf("Accepting your new reality you sit back down on the beach when your adrenaline fianlly fades away, and hungry and thirst become your new focus\n");
 printf("These are your hunger and thirst levels. They will start at 100 points and you need to eat and drink to maintain them. If they fall too low\nyou will become weaker and unable to perform as many tasks and if either reach 0 you will die.\n");
 
-    printf("1.Collect wood\n");
+  printf("You look off into the horizon and try to guess what time of day it is. With the sun still beating down on you heavily you guess it is around 14:00.\n");
+printf("You only have a few hours before sunset at 19:00.\n");
+printf("1. Collect wood\n");
 printf("2. Build a shelter\n");
 printf("3. Find food\n");
 printf("4. Find water\n");
 scanf("%d", &x);
   if (x==1) {
+  
     printf("You venture along the beach in search of some drift wood.\n");
-    tme(15);
-   printf("You venture away from the beach and towards the jungle.\n");
+    tme(30);
+    printf("You start to find pieces strune across the beach. How many pieces would you like to collect?");
+    scanf("%d", &wood);
+      if (wood>10) {
+        printf("You cannot carry that many pieces. On your way back you drop 2.\n");
+        wood=wood-2;
+      }
+    wood_index= wood;
+    t=3*wood+30;
+    tme(t);
+    printf("Would you like to collect more wood? (y or n)\n");
+    scanf(" %c", &choice1);
+      if (choice1=='y') {
+        printf("On your way back you discover a coconut tree with a fallen coconut at its base.\n");
+          printf("Will you collect it? (y or n)");
+          scanf(" %c", &choice2);
+            if (choice2=='y') {
+              coconut=1;
+            }
+        printf("You continue your mission to collect wood.\n");
+        printf("How many pieces of wood will you collect this time?"); 
+        scanf("%d", &wood);
+          if (wood>10) {
+            printf("You cannot carry that many pieces. On your way back you drop 2.\n");
+            wood=wood-2;
+        }
+        wood_index= wood_index+wood;
+      }
+      else {
+        printf("\n");
+      }
+      //printf("You venture away from the beach and towards the jungle.\n");
   }
-
 return 0;
-
 }
   
