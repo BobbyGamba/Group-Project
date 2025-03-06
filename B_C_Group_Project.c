@@ -115,6 +115,16 @@ scanf("%d", &x);
       }
       //printf("You venture away from the beach and towards the jungle.\n");
   }
+printf("Even after waking up you still can't believe what's happened.\n");
+printf("You had hoped - prayed - that morning would free you from this nightmare. But as the sun rises, reality\n");
+printf("only sinks deeper. You're still here. Trapped. Forced to survive.\n");
+printf("As you push yourself up, scanning yout surroundings, something catches your eye - a disturbance in the\n");
+printf("sand that wasn't there last night\n");
+printf("Approaching causiously, your mind struggles to process what your seeing. But the realization quickly\n");
+printf("curdles into terror as deep, clawed footprints come into full view\n");
+printf("Your heart pounds. Your breath turns shallow and ragged. Sweat beads down your forehead.\n");
+printf("You're not alone on this island.");
+printf("And whatever is here with you... is massive\n");
 return 0;
 }
   
