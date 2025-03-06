@@ -30,7 +30,7 @@ int hours=14;
   return 0;
 }
 
-void clear() {
+void clr() {
     while ( getchar() != '\n' );
 }
 
@@ -51,13 +51,13 @@ printf("Scanning your surroundings you try to wake up from this new terrible nig
 printf("1: Yell for help\n2: Look for fellow survivors\n3: Cry\n");
 rc = scanf("%d", &x);
 if (rc != 1) {
-    clear();
+    clr();
 }
 while (x != 1 && x !=2 && x != 3) {
     printf("Please enter a 1, 2, or 3");
     rc = scanf("%d", &x);
     if (rc != 1) {
-        clear();
+        clr();
     }
     if (x == 1) { 
         printf("You try yelling for help, screaming until you can't anymore but your cries fall upon the deaf ears of the trees\n");
