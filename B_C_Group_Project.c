@@ -1,9 +1,12 @@
 #include <stdio.h>
 
+/*Global Variables*/
+int hours=14; 
+int wood_index=0; 
+
 /*Time function*/
 int tme(int min) {
 int index=0;
-int hours=14;
   index= index+min;
   if (index<10) {
     printf("%d:0%d\n", hours, index);
@@ -66,7 +69,7 @@ int thirst(int thr) {
 
 /*Function for collecting wood*/
 int collectingwood() {
-  int wood, wood_index, t, coconut=0;
+  int wood, t, coconut=0;
   char choice1, choice2;
   printf("You venture along the beach in search of some drift wood.\n");
   tme(30);
