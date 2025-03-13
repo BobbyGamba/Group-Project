@@ -102,13 +102,28 @@ int collectingwood() {
       }
     return 0;
 }
+/*Function for monster*/
+int monster(int shelter) {
+    if(shelter == 1) {
+        printf("As you drift to sleep you hear a rustling sound.");
+        printf("The sound gets louder as you hear footsteps approaching you.");
+        printf("The footsteps stop outside your shelter, then grow louder and fade away as the monster walks away.");
+        printf("Your safe inside tonight.");
+    }
+    else {
+        printf("As you drift to sleep you're awoken by a rustling sound.");
+        printf("With drowsy eyes you peer into the darkness to see the bushes shaking.");
+        printf("Before you can think the monster jumps out of the brush and the last thing you see is the glint of the moon\noff its razor sharp claws.");
+        printf("GAME OVER");
+    }
+}
 
 void clr() {
     while ( getchar() != '\n' );
 }
 
 int main() {
-int x, i, rc;
+int x, i, rc; shelter = 0;
 char y[30];
  
 FILE * f=fopen("island.txt","r"); 
@@ -174,6 +189,7 @@ scanf("%d", &x);
       printf("The sun is getting lower in the sky.\n");
       tme(60);
       printf("You have %d pieces of wood left.\n", wood_index);
+      shelter+=1;
     }
   }
   else if (x==3) {
