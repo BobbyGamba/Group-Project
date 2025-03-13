@@ -115,6 +115,7 @@ int monster(int shelter) {
         printf("With drowsy eyes you peer into the darkness to see the bushes shaking.");
         printf("Before you can think the monster jumps out of the brush and the last thing you see is the glint of the moon\noff its razor sharp claws.");
         printf("GAME OVER");
+        exit(0);
     }
 }
 
