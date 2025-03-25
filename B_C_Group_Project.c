@@ -1,131 +1,17 @@
 #include <stdio.h>
-
-/*Global Variables*/
-int hours=14; 
-int wood_index=0; 
-
-/*Time function*/
-int tme(int min) {
-int index=0;
-  index= index+min;
-  if (index<10) {
-    printf("%d:0%d\n", hours, index);
-  }
-  else if (index<60) {
-    printf("%d:%d\n", hours, index);
-  }
-  else if (index==60) {
-    hours=hours+1;
-    index=0;
-    printf("%d:00\n", hours);
-  }
-  else {
-    while (index>60) {
-      index=index-60;
-      hours= hours+1;
-    }
-    if (index<10) {
-      printf("%d:0%d\n", hours, index);
-    }
-    else {
-      printf("%d:%d\n", hours, index);
-    }
-  }
-  return 0;
-}
-/*Hunger levels function*/
-int hunger(int hun) {
-  int h_index=100;
-  h_index=h_index+hun;
-    if (h_index>100) {
-      h_index=100;
-      printf("Health=%d\n", h_index);
-    }
-    else if (h_index<=0) {
-      printf("You died due to hunger.\n");
-    }
-    else {
-      printf("Health=%d\n", h_index);
-    }
-  return 0;
-}
-/*Thirst levels function*/
-int thirst(int thr) {
-  int t_index=100;
-  t_index=t_index+thr;
-    if (t_index>100) {
-      t_index=100;
-      printf("Thirst=%d\n", t_index);
-    }
-    else if (t_index<=0) {
-      printf("You died due to thirst.\n");
-      printf("Game over.\n");
-    }
-    else {
-      printf("Thirst=%d\n", t_index);
-    }
-  return 0;
-}
-
-/*Function for collecting wood*/
-int collectingwood() {
-  int wood, t, coconut=0;
-  char choice1, choice2;
-  printf("You venture along the beach in search of some drift wood.\n");
-  tme(30);
-  printf("You start to find pieces strune across the beach. How many pieces would you like to collect?");
-  scanf("%d", &wood);
-    if (wood>10) {
-      printf("You cannot carry that many pieces. On your way back you drop 2.\n");
-      wood=wood-2;
-    }
-    wood_index= wood;
-    t=3*wood+30;
-    tme(t);
-    printf("Would you like to collect more wood? (y or n)\n");
-    scanf(" %c", &choice1);
-      if (choice1=='y') {
-        printf("On your way back you discover a coconut tree with a fallen coconut at its base.\n");
-          printf("Will you collect it? (y or n)");
-          scanf(" %c", &choice2);
-            if (choice2=='y') {
-              coconut=1;
-            }
-        printf("You continue your mission to collect wood.\n");
-        printf("How many pieces of wood will you collect this time?"); 
-        scanf("%d", &wood);
-          if (wood>20) {
-            printf("You cannot carry that many pieces. On your way back you drop 2.\n");
-            wood=wood-2;
-        }
-        wood_index= wood_index+wood;
-      }
-    return 0;
-}
-/*Function for monster*/
-int monster(int shelter) {
-    if(shelter == 1) {
-        printf("As you drift to sleep you hear a rustling sound.");
-        printf("The sound gets louder as you hear footsteps approaching you.");
-        printf("The footsteps stop outside your shelter, then grow louder and fade away as the monster walks away.");
-        printf("Your safe inside tonight.");
-    }
-    else {
-        printf("As you drift to sleep you're awoken by a rustling sound.");
-        printf("With drowsy eyes you peer into the darkness to see the bushes shaking.");
-        printf("Before you can think the monster jumps out of the brush and the last thing you see is the glint of the moon\noff its razor sharp claws.");
-        printf("GAME OVER");
-        exit(0);
-    }
-}
+#include "time.h"
+#include "thirstLevels.h"
+#include "hungerLevels.h"
+#include "collectingWood.h"
+#include <unistd.h>
 
 void clr() {
     while ( getchar() != '\n' );
 }
 
 int main() {
-int x, i, rc; shelter = 0;
-char y[30];
+int x, i, rc, shelter = 0, bananas, blackberries;
+char y[30], choice1, choice2;
  
 FILE * f=fopen("island.txt","r"); 
     for (i = 0; i <=10; i++) {
@@ -161,46 +47,109 @@ while (x != 1 && x !=2 && x != 3) {
 printf("Accepting your new reality you sit back down on the beach when your adrenaline fianlly fades away, and hungry and thirst become your new focus\n");
 printf("These are your hunger and thirst levels. They will start at 100 points and you need to eat and drink to maintain them. If they fall too low\nyou will become weaker and unable to perform as many tasks and if either reach 0 you will die.\n");
 
-printf("You look off into the horizon and try to guess what time of day it is. With the sun still beating down on you heavily you guess it is around 14:00.\n");
-printf("You only have a few hours before sunset at 19:00.\n");
-printf("1. Collect wood\n");
-printf("2. Build a shelter\n");
-printf("3. Find food\n");
-printf("4. Find water\n");
-scanf("%d", &x);
-  if (x==1) {
-    collectingwood();
-    printf("1. Collect wood\n");
-    printf("2. Build a shelter\n");
-    printf("3. Find food\n");
-    printf("4. Find water\n");
-    scanf("%d", &x);
-  }
-  else if (x==2) {
-    if (wood_index<8) {
-      printf("You do not have enough wood to build a shelter.\n");
+  printf("You look off into the horizon and try to guess what time of day it is. With the sun still beating down on you heavily you guess it is around 14:00.\n");
+  printf("You only have a few hours before sunset at 19:00.\n");
+  sleep(3);
+    while (hours<19) {
       printf("1. Collect wood\n");
       printf("2. Build a shelter\n");
       printf("3. Find food\n");
       printf("4. Find water\n");
-      scanf("%d", &x); 
+      scanf("%d", &x);
+        if (x==1) {
+          collectingwood();
+        }
+        else if (x==2) {
+          if (wood_index<8) {
+            printf("You do not have enough wood to build a shelter.\n"); 
+          }
+          else {
+            printf("You muster all your strength and begin building a shelter.\n");
+            printf("The sun is getting lower in the sky.\n");
+            sleep(2);
+            tme(60);
+            wood_index= wood_index-8;
+            printf("You have %d pieces of wood left.\n", wood_index);
+            shelter+=1;
+          }
+        }
+        else if (x==3) {
+          printf("You venture away from the beach and towards the jungle.\n");
+          printf("The tropical forest is so dense, scarce light gets in.\n");
+          sleep(3);
+          printf("As you go deeper and deeper you begin to lose hope. Everything is unfamiliar, green, and inedible.\n");
+          printf("What if there is no food for you here?\n");
+          tme(30);
+          sleep(4);
+          printf("You find a grove of wild blackberries.\n");
+          printf("Would you like to collect some? (y or n)");
+          scanf(" %c", &choice1);
+            if (choice1=='y') {
+              printf("You decide to use your shirt as a satch.\n");
+              sleep(1);
+              printf("How many would you like to collect?");
+              scanf("%d",&blackberries);
+              tme(5);
+            }
+          printf("Would you like to keep searching for more food?");
+          scanf(" %c", &choice2);
+            if (choice2=='y') {
+              printf("You keep venturing deeper into the jungle.\n");
+              printf("In the distance you see a tree with what looks to be yellow fruit on it.\n");
+              sleep(3);
+              printf("As you get closer you find the tree heavy with clusters of bananas.\n");
+              tme(20);
+              printf("How many would you like to collect?");
+              scanf("%d", &bananas);
+              tme(30);
+            }
+          printf("You head back to the beach with your bounty.\n");
+          sleep(2);
+            if (shelter==1) {
+              printf("You can't find your camp.\n");
+              printf("left or right? (L or R)");
+              scanf(" %c", &choice2);
+                if (choice2=='L') {
+                  printf("You walk along the shore for 20 minutes and can't find you camp so you turn back.\n");
+                  tme(40);
+                }
+                else {
+                  printf("After 10 minutes of walking along the shore you find your shelter.\n");
+                  tme(10);
+                }
+            }
+        }
+        else if (x==4) {
+          printf("You cannot drink seawater so you make your way into the jungle to find freshwater.\n");
+          sleep(2);
+          printf("Will you go left or right? (L or R)");
+          scanf("%s", &choice1);
+            if (choice1=='L') {
+              printf("As you make your way through the foliage you find a coconut tree.\n");
+              sleep(3);
+              printf("At the base you find an old coconut split in half. You can use this to collect a small amount of water.\n");
+              sleep(3);
+              printf("You follow the sounds of water until you find a stream and begin drinking as much water as you can.\n");
+              sleep(3);
+              thirst(100);
+              sleep(3);
+              printf("You fill up your coconut with water and head back to the beach.\n");
+              tme(60);
+            }
+            else if (choice1=='R'){
+              printf("You find a small river and drink water until you're full.\n");
+              thirst(100);
+              printf("You head back to the beach");
+              tme(20);
+            }
+            else {
+            }
+        }
+        else {
+          printf("Error. Unrecognized input");
+        }
     }
-    else {
-      printf("You muster all your strength and begin building a shelter.\n");
-      printf("The sun is getting lower in the sky.\n");
-      tme(60);
-      printf("You have %d pieces of wood left.\n", wood_index);
-      shelter+=1;
-    }
-  }
-  else if (x==3) {
-  printf("You venture away from the beach and towards the jungle.\n");
-  }
-  else if (x==4) {
-  }
-  else {
-  printf("error handling");
-  }
+
 printf("Even after waking up you still can't believe what's happened.\n");
 printf("You had hoped - prayed - that morning would free you from this nightmare. But as the sun rises, reality\n");
 printf("only sinks deeper. You're still here. Trapped. Forced to survive.\n");
