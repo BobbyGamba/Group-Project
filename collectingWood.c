@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include "index.h"
 /* Global Variables*/
 int wood_index=0; 
 int shelter=0;
