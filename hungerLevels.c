@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "index.h"
 /*Hunger levels function*/
 int hunger(int hun) {
   int h_index=100;
