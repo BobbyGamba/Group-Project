@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "globalVariables.h"
+/* Global Variables*/
+int wood_index=0; 
+int shelter=0;
 /*Function for collecting wood*/
 int collectingwood() {
   int wood, t, coconut=0, difference;
