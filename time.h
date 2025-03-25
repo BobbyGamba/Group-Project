@@ -1,0 +1,32 @@
+#include <stdio.h>
+int hours=14;
+
+/*Time function*/
+int tme(int min) {
+int index=0;
+  index= index+min;
+  if (index<10) {
+    printf("%d:0%d\n", hours, index);
+  }
+  else if (index<60) {
+    printf("%d:%d\n", hours, index);
+  }
+  else if (index==60) {
+    hours=hours+1;
+    index=0;
+    printf("%d:00\n", hours);
+  }
+  else {
+    while (index>60) {
+      index=index-60;
+      hours= hours+1;
+    }
+    if (index<10) {
+      printf("%d:0%d\n", hours, index);
+    }
+    else {
+      printf("%d:%d\n", hours, index);
+    }
+  }
+  return 0;
+}
