@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "index.h"
 /*Thirst levels function*/
 int thirst(int thr) {
   int t_index=100;
