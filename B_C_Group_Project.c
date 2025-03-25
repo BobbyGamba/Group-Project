@@ -1,8 +1,5 @@
 #include <stdio.h>
-#include "time.h"
-#include "thirstLevels.h"
-#include "hungerLevels.h"
-#include "collectingWood.h"
+#include "index.h"
 #include <unistd.h>
 
 void clr() {
