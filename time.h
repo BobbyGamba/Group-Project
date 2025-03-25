@@ -1,4 +1,5 @@
 #include <stdio.h>
+/*Global Variable*/
 int hours=14;
 
 /*Time function*/
