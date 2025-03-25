@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "index.h"
 /*Global Variable*/
 int hours=14;
 
