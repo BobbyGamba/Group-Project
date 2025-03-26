@@ -1,8 +1,7 @@
 #include <stdio.h>
+#include "index.h"
 
-int shelter = 0;
-
-void monster(int shelter) {
+int monster(int shelter) {
     if(shelter == 1) {
         printf("In the middle of the night you're awoken by the sound of footsteps outside your shelter.");
         printf("The sounds approach you in the darkness but retreat into the night, you're safe for now...");
