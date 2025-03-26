@@ -11,3 +11,9 @@ int monster(int shelter) {
         printf("As your eyes try to adjust to peer into the night the bushes in front of you start to rustle.");
         printf("Before you can begin to think about what's happening a ghastly monster leaps towards you.");
         printf("The last thing you see is the gleem of the moonlight on the beasts teeth before you are devoured.");
+        printf("GAME OVER");
+        exit();
+    }
+
+return 0;
+}
