@@ -10,7 +10,8 @@ int thirst(int thr) {
     }
     else if (t_index<=0) {
       printf("You died due to thirst.\n");
-      printf("Game over.\n");
+      printf("GAME OVER.\n");
+      exit();
     }
     else {
       printf("Thirst Levels: %d\n", t_index);
