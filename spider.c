@@ -8,6 +8,7 @@ int spider(int shelter)
         printf("You wake up in the morning with an aching pain over your whole body unable to move and exhausted.");
         printf("You've been bitten by a spider and are now sick.");
         h_index = h_index - 25;
+        t_index = t_index - 25;
     }
 return 0;
 }
