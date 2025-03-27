@@ -10,6 +10,8 @@ int hunger(int hun) {
     }
     else if (h_index<=0) {
       printf("You died due to hunger.\n");
+      printf("GAME OVER");
+      exit();
     }
     else {
       printf("Health=%d\n", h_index);
