@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "index.h"
 
 int monster(int shelter) {
@@ -12,7 +13,7 @@ int monster(int shelter) {
         printf("Before you can begin to think about what's happening a ghastly monster leaps towards you.");
         printf("The last thing you see is the gleem of the moonlight on the beasts teeth before you are devoured.");
         printf("GAME OVER");
-        exit();
+        exit(EXIT_SUCCESS);
     }
 
 return 0;
