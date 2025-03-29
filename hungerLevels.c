@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "index.h"
 /*Hunger levels function*/
 int hunger(int hun) {
@@ -11,7 +12,7 @@ int hunger(int hun) {
     else if (h_index<=0) {
       printf("You died due to hunger.\n");
       printf("GAME OVER");
-      exit();
+      exit(EXIT_SUCCESS);
     }
     else {
       printf("Health=%d\n", h_index);
