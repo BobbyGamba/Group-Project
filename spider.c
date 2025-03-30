@@ -73,6 +73,7 @@ int spider(int shelter) {
                             if (x2==1) {
                                 printf("The berries you thought were blackberries were actually poisonous.\n);
                                 printf("You die.\n");
+                                printf("GAME OVER");
                                 /*END GAME*/
                                 exit(EXIT_SUCCESS);
                             }
