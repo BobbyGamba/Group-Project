@@ -10,15 +10,18 @@ int main() {
 int x, i, rc, shelter = 0;
 char y[30], choice1, choice2;
  
-FILE * f=fopen("island.txt","r"); 
+/*FILE * f=fopen("island.txt","r"); 
     for (i = 0; i <=10; i++) {
         fgets(y, 30, f);
         printf("%s\n", y);
     }
+    */
 printf("You awaken to the sounds of waves crashing on the beach\n");
 printf("The water splashes on your face as the waves effortlessly throw you onto the shore\n");
+sleep(2);
 printf("You stumble too your feet trying to grasp the situation you find youself in\n");
 printf("Before you stands a forest of palm trees towering over you and to your sides a white sand beach that curves to an end you can't see\n");
+sleep(2);
 printf("Scanning your surroundings you try to wake up from this new terrible nightmare\n");
 printf("1: Yell for help\n2: Look for fellow survivors\n3: Cry\n");
 rc = scanf("%d", &x);
@@ -34,21 +37,26 @@ rc = scanf("%d", &x);
   }
   if (x == 1) { 
     printf("You try yelling for help, screaming until you can't anymore but your cries fall upon the deaf ears of the trees\n");
+    sleep(2);
   }
   else if (x == 2) {
-    printf("Frantically, you run up and down the beach, not daring to dive into the thick growth of the jungle,\ntrying to find someone, anyone but to no avail. You return to the spot where you ashed to shore\n");
+    printf("Frantically, you run up and down the beach, not daring to dive into the thick growth of the jungle,\n");
+    printf("trying to find someone, anyone but to no avail. You return to the spot where you ashed to shore\n");
+      sleep(2);
   }
   else if (x == 3) {
     printf("Overcome by emotions of grief and despair you fall to your knees and begin to cry. With tears\n");
     printf("running down your face you hear the sound of your own wailing echoing through the trees and bouncing back to you.\n");
     printf("The twisting vines of the trees distorts the sound and it's almost as if the jungle is laughing at you\n");
+    sleep(2);
     }
   printf("Accepting your new reality you sit back down on the beach when your adrenaline fianlly fades away, and hungry and thirst become your new focus\n");
   printf("These are your hunger and thirst levels. They will start at 100 points and you need to eat and drink to maintain them.\n");
+    sleep(2);
   printf("If they fall too low you will become weaker and unable to perform as many tasks and if either reach 0 you will die.\n");
   printf("You look off into the horizon and try to guess what time of day it is. With the sun still beating down on you heavily you guess it is around 14:00.\n");
   printf("You only have a few hours before sunset at 19:00.\n");
-  sleep(3);
+  sleep(4);
     while (hours<19) {
       printf("1. Collect wood\n");
       printf("2. Build a shelter\n");
@@ -71,6 +79,7 @@ rc = scanf("%d", &x);
         else if (x==2) {
           if (wood_index<8) {
             printf("You do not have enough wood to build a shelter.\n"); 
+              sleep(1);
           }
           else {
             printf("You muster all your strength and begin building a shelter.\n");
@@ -177,8 +186,9 @@ rc = scanf("%d", &x);
             }
             else if (choice1==2){
               printf("You find a small river and drink water until you're full.\n");
+                sleep(2);
               thirst(100);
-              printf("You head back to the beach");
+              printf("You head back to the beach.\n");
               tme(20);
             }
         }
