@@ -41,6 +41,8 @@ while (x != 1 && x !=2 && x != 3) {
         printf("Overcome by emotions of grief and despair you fall to your knees and begin to cry. With tears\nrunning down your face you hear the sound of your own wailing echoing through the trees and bouncing back to you.\nThe twisting vines of the trees distorts the sound and it's almost as if the jungle is laughing at you\n");
     }
 }
+        clr(rc);
+    }
 printf("Accepting your new reality you sit back down on the beach when your adrenaline fianlly fades away, and hungry and thirst become your new focus\n");
 printf("These are your hunger and thirst levels. They will start at 100 points and you need to eat and drink to maintain them. If they fall too low\nyou will become weaker and unable to perform as many tasks and if either reach 0 you will die.\n");
 
@@ -52,7 +54,16 @@ printf("These are your hunger and thirst levels. They will start at 100 points a
       printf("2. Build a shelter\n");
       printf("3. Find food\n");
       printf("4. Find water\n");
-      scanf("%d", &x);
+      rc= scanf("%d", &x);
+        if (rc != 1) {
+            clr();
+        }
+        while (x != 1 && x !=2 && x != 3 && x != 4) {
+            printf("Please enter a 1, 2, 3, or 4");
+             rc = scanf("%d", &x);
+                if (rc != 1) {
+                    clr();
+        }
         if (x==1) {
           collectingwood();
         }
@@ -105,7 +116,7 @@ printf("These are your hunger and thirst levels. They will start at 100 points a
             if (shelter==1) {
               printf("You can't find your camp.\n");
               printf("left or right? (L or R)");
-              scanf(" %c", &choice2);
+              rc=scanf(" %c", &choice2);
                 if (choice2=='L') {
                   printf("You walk along the shore for 20 minutes and can't find you camp so you turn back.\n");
                   tme(40);
@@ -139,13 +150,9 @@ printf("These are your hunger and thirst levels. They will start at 100 points a
               printf("You head back to the beach");
               tme(20);
             }
-            else {
-            }
-        }
-        else {
-          printf("Error. Unrecognized input");
         }
     }
+clr(rc);
 
 printf("Even after waking up you still can't believe what's happened.\n");
 printf("You had hoped - prayed - that morning would free you from this nightmare. But as the sun rises, reality\n");
