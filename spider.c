@@ -18,7 +18,7 @@ int spider(int shelter) {
                     if (rc != 1) {
                         clr();
                     }
-                    while (x != 1 && x !=2) {
+                    while (x1 != 1 && x1 !=2) {
                         printf("Please enter a 1 or 2");
                         rc = scanf("%d", &x1);
                             if (rc != 1) {
@@ -31,7 +31,7 @@ int spider(int shelter) {
                             if (rc1 != 1) {
                                 clr();
                             }
-                             while (x2>water || x != 1 && x !=2) {
+                             while (x2>water || x2 != 1 && x2 !=2) {
                                 printf("Please enter a valid number no greater than your water supply.");
                                  rc = scanf("%d", &x2);
                                     if (rc1 != 1) {
@@ -45,12 +45,12 @@ int spider(int shelter) {
             clr(rc);
             if (bananas>=1 || blackberries>=1) {
                 printf("You have %d bananas and %d blackberries.\n", bananas, blackberries);
-                printf("Would you like to replenish your hunger levels?(Yes=1 or N=2)");
+                printf("Would you like to replenish your hunger levels?(Yes=1 or No=2)");
                 rc= scanf("%d", &x1);
                     if (rc != 1) {
                         clr();
                     }
-                    while (x != 1 && x !=2) {
+                    while (x1 != 1 && x1 !=2) {
                         printf("Please enter a 1 or 2");
                         rc = scanf("%d", &x1);
                             if (rc != 1) {
@@ -63,46 +63,47 @@ int spider(int shelter) {
                             if (rc1 != 1) {
                                 clr();
                             }
-                            while (x != 1 && x !=2) {
+                            while (x2 != 1 && x2 !=2) {
                                 printf("Please enter a 1 or 2.");
-                                 rc = scanf("%d", &x2);
+                                 rc1 = scanf("%d", &x2);
                                     if (rc1 != 1) {
                                         clr();
                                     }
                              }
                             if (x2==1) {
                                 printf("The berries you thought were blackberries were actually poisonous.\n);
-                                printf("You die.");
+                                printf("You die.\n");
                                 /*END GAME*/
+                                exit(EXIT_SUCCESS);
                             }
                             else if (x2==2) {
-                                
-                        printf("How many would you like to eat?");
-                        rc1= scanf("%d", &x2);
-                            if (rc1 != 1) {
-                                clr();
-                            }
-                             while (x2>water || x != 1 && x !=2) {
-                                printf("Please enter a valid number no greater than your water supply.");
-                                 rc = scanf("%d", &x2);
+                                clr(rc1);
+                                printf("How many would you like to eat?");
+                                rc1= scanf("%d", &x1);
                                     if (rc1 != 1) {
                                         clr();
                                     }
-                             }
-                        t= x2*15;
-                        thirst(t); 
+                                while (x1>= bananas || x1 != 1 && x1 !=2) {
+                                    printf("Please enter a valid number no greater than your water supply.");
+                                    rc1 = scanf("%d", &x1);
+                                        if (rc1 != 1) {
+                                            clr();
+                                        }
+                                }
+                        h= x1*10;
+                        hunger(h); 
                     }
                         
         printf("You try to go back to sleep but after what feels like hours, your body starts to feel achy.\n");
         printf("What if that spider wasn't so harmless after all?\n");
         printf("You feel a fever start to overtake your body, muscles spasming uncontrolably.\n");
-            if (medicine==1);
+            if (medicine==1) {
                 printf("You reach for the bottle of medicine you found washed up on the beach and drink the whole bottle.\n");
                 printf("Only time will tell if it will help.");
                 thirst(35);
-    
-                    medicine==0;
-        
-    }
-}
+                hunger(15);
+            }
+        printf("You wake up hours later. Your fever is gone and your body seems to have gotten over the spider bite.");
+        hours= 11;
+        tme(0);
 return 0;
