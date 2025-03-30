@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "index.h"
 #include <unistd.h>
+#include "index.h"
 
 void clr() {
     while ( getchar() != '\n' );
