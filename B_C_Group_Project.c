@@ -16,13 +16,13 @@ char y[30], choice1, choice2;
         printf("%s\n", y);
     }
     */
-printf("You awaken to the sounds of waves crashing on the beach\n");
-printf("The water splashes on your face as the waves effortlessly throw you onto the shore\n");
+printf("You awaken to the sounds of waves crashing on the beach.\n");
+printf("The water splashes on your face as the waves effortlessly throw you onto the shore.\n");
 sleep(2);
-printf("You stumble too your feet trying to grasp the situation you find youself in\n");
-printf("Before you stands a forest of palm trees towering over you and to your sides a white sand beach that curves to an end you can't see\n");
+printf("You stumble too your feet trying to grasp the situation you find youself in.\n");
+printf("Before you stands a forest of palm trees towering over you and to your sides a white sand beach that curves to an end you can't see.\n");
 sleep(2);
-printf("Scanning your surroundings you try to wake up from this new terrible nightmare\n");
+printf("Scanning your surroundings you try to wake up from this new terrible nightmare.\n");
 printf("1: Yell for help\n2: Look for fellow survivors\n3: Cry\n");
 rc = scanf("%d", &x);
   if (rc != 1) {
