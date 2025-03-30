@@ -74,7 +74,7 @@ rc = scanf("%d", &x);
                 }
         }
         if (x==1) {
-          collectingWood();
+          collectingwood();
         }
         else if (x==2) {
           if (wood_index<8) {
