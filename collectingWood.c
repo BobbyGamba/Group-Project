@@ -28,13 +28,7 @@ int collectingwood() {
   printf("Would you like to collect more wood? (y or n)\n");
   scanf(" %c", &choice1);
     if (choice1=='y') {
-      printf("On your way back you discover a coconut tree with a fallen coconut at its base.\n");
-      sleep(1);
-      printf("Will you collect it? (y or n)");
-      scanf(" %c", &choice2);
-        if (choice2=='y') {
-          coconut=1;
-        }
+      rand_item();
       printf("You continue your mission to collect wood.\n");
       sleep(2);
       printf("How many pieces of wood will you collect this time?"); 
