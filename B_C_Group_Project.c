@@ -211,6 +211,67 @@ printf("curdles into terror as deep, clawed footprints come into full view\n");
 printf("Your heart pounds. Your breath turns shallow and ragged. Sweat beads down your forehead.\n");
 printf("You're not alone on this island.");
 printf("And whatever is here with you... is massive\n");
+printf("Coming back to reality and the situation at hand, you plan your next move to survive.");
+while (hours<19) {
+    printf("1. Collect wood.\n");
+    printf("2. Build shelter.\n");
+    printf("3. Find food.\n");
+    printf("4. Find water.\n");
+    rc = scanf("%d", &choice1);
+        if (rc != 1) {
+            clr();
+        }
+    while(choice1 != 1 && choice1 != 2 && choice1 != 3 && choice1 != 4) {
+        printf("Please enter a 1, 2, 3, or 4.\n")
+        rc = scanf("%d", &choice1);
+            if(rc != 1) {
+                clr();
+            }
+    }
+    if(choice1 == 1) {
+        collectingWood.c
+    }
+    else if(choice1 == 2) {
+        if(shelter == 1) {
+            printf("You've already made a shelter\n");
+        }
+        else {
+        if (wood_index<8) {
+            printf("You do not have enough wood to build a shelter.\n"); 
+              sleep(1);
+          }
+          else {
+            printf("You muster all your strength and begin building a shelter.\n");
+            printf("The sun is getting lower in the sky.\n");
+            sleep(2);
+            tme(60);
+            wood_index= wood_index-8;
+            printf("You have %d pieces of wood left.\n", wood_index);
+            shelter+=1;
+          }
+        }
+    }
+    else if (choice1 == 3) {
+        printf("What would you go like to find?");
+        printf("1. Coconuts");
+        printf("2. Bananas");
+        printf("3. Meat");
+        rc = scanf("%d", &choice2);
+            if(rc != 1) {
+                clr()l;
+            }
+        while(choice2 != 1 && choice2 != 2 && choice2 != 3) { 
+            printf("Please enter a 1, 2, or 3");
+            rc = scanf("%d", &choice2);
+                if(rc != 1) {
+                    clr();
+                }
+        }
+        if(choice2 == 1) {
+            printf("You return to the coconut tree
+        
+        
+        
 return 0;
 }
   
