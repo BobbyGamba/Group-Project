@@ -51,8 +51,10 @@ rc = scanf("%d", &x);
     sleep(2);
     }
   printf("Accepting your new reality you sit back down on the beach when your adrenaline fianlly fades away, and hungry and thirst become your new focus\n");
-  printf("These are your hunger and thirst levels. They will start at 100 points and you need to eat and drink to maintain them.\n");
+  printf("These are your hunger and thirst levels. You need to eat and drink to maintain them.\n");
     sleep(2);
+    hunger();
+    thirst(); 
   printf("If they fall too low you will become weaker and unable to perform as many tasks and if either reach 0 you will die.\n");
   printf("You look off into the horizon and try to guess what time of day it is. With the sun still beating down on you heavily you guess it is around 14:00.\n");
   printf("You only have a few hours before sunset at 19:00.\n");
