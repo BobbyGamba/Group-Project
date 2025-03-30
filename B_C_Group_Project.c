@@ -63,6 +63,7 @@ rc = scanf("%d", &x);
              rc = scanf("%d", &x);
                 if (rc != 1) {
                     clr();
+                }
         }
         if (x==1) {
           collectingwood();
@@ -152,7 +153,6 @@ rc = scanf("%d", &x);
             }
         }
     }
-clr(rc);
 printf("The sun has set and exhaustion settles down upom you.\n");
     if (shelter==1){
         printf("You cuddle up under your makeshift shelter and let sleep overtake you.\n");
