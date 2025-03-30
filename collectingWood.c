@@ -22,8 +22,8 @@ int collectingwood() {
   printf("You head back.\n");
   wood_index= wood;
   tme(t);
-  hunger(-10);
-  thirst(-15);
+  hunger(-7);
+  thirst(-10);
   sleep(2);
   printf("Would you like to collect more wood? (y or n)\n");
   scanf(" %c", &choice1);
@@ -46,8 +46,8 @@ int collectingwood() {
           wood=10;
         }
       tme(t);
+      hunger(-7);
       hunger(-10);
-      hunger(-15);
       wood_index= wood_index+wood;
       sleep(3);
     }
