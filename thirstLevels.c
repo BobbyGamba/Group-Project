@@ -3,7 +3,7 @@
 #include "index.h"
 /*Thirst levels function*/
 int thirst(int thr) {
-  int t_index=100;
+  int t_index=90;
   t_index=t_index+thr;
     if (t_index>100) {
       t_index=100;
