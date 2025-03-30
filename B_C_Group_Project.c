@@ -153,7 +153,14 @@ printf("These are your hunger and thirst levels. They will start at 100 points a
         }
     }
 clr(rc);
-
+printf("The sun has set and exhaustion settles down upom you.\n");
+    if (shelter==1){
+        printf("You cuddle up under your makeshift shelter and let sleep overtake you.\n");
+    }
+    else {
+        printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
+    }
+spider();
 printf("Even after waking up you still can't believe what's happened.\n");
 printf("You had hoped - prayed - that morning would free you from this nightmare. But as the sun rises, reality\n");
 printf("only sinks deeper. You're still here. Trapped. Forced to survive.\n");
