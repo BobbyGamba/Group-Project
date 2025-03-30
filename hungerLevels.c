@@ -3,7 +3,7 @@
 #include "index.h"
 /*Hunger levels function*/
 int hunger(int hun) {
-  int h_index=100;
+  int h_index=85;
   h_index=h_index+hun;
     if (h_index>100) {
       h_index=100;
