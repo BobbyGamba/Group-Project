@@ -13,6 +13,7 @@ int collectingwood() {
   sleep(1);
   printf("You start to find pieces strune across the beach. How many pieces would you like to collect?");
   scanf("%d", &wood);
+  t=3*wood+30;
     if (wood>10) {
       difference= wood-10;
       printf("You cannot carry that many pieces. You drop %d.\n", difference);
@@ -20,8 +21,9 @@ int collectingwood() {
     }
   printf("You head back.\n");
   wood_index= wood;
-  t=3*wood+30;
   tme(t);
+  hunger(-10);
+  thirst(-15);
   sleep(2);
   printf("Would you like to collect more wood? (y or n)\n");
   scanf(" %c", &choice1);
@@ -37,11 +39,15 @@ int collectingwood() {
       sleep(2);
       printf("How many pieces of wood will you collect this time?"); 
       scanf("%d", &wood);
+       t=3*wood+30;
         if (wood>10) {
           difference= wood-10;
           printf("You cannot carry that many pieces. You drop %d.\n", difference);
           wood=10;
         }
+      tme(t);
+      hunger(-10);
+      hunger(-15);
       wood_index= wood_index+wood;
       sleep(3);
     }
