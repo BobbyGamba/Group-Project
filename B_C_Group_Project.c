@@ -54,7 +54,7 @@ rc = scanf("%d", &x);
       printf("2. Build a shelter\n");
       printf("3. Find food\n");
       printf("4. Find water\n");
-      rc= scanf("%d", &x);
+      rc = scanf("%d", &x);
         if (rc != 1) {
             clr();
         }
@@ -91,18 +91,38 @@ rc = scanf("%d", &x);
           tme(30);
           sleep(4);
           printf("You find a grove of wild blackberries.\n");
-          printf("Would you like to collect some? (y or n)");
-          scanf(" %c", &choice1);
-            if (choice1=='y') {
+          printf("Would you like to collect some? (1. Yes or 2. No)");
+          rc = scanf(" %d", &choice1);
+            if (rc != 1) {
+                clr;
+            }
+          while( choice1 != 1 && choice1 != 2) {
+              printf("Please enter a 1 or 2");
+              rc = scanf("%d", &choice1);
+                  if (rc != 1) {
+                      clr();
+                  }
+          }
+            if (choice1==1) {
               printf("You decide to use your shirt as a satch.\n");
               sleep(1);
               printf("How many would you like to collect?");
               scanf("%d",&blackberries);
               tme(5);
             }
-          printf("Would you like to keep searching for more food?");
-          scanf(" %c", &choice2);
-            if (choice2=='y') {
+          printf("Would you like to keep searching for more food? (1. Yes or 2. No");
+          rc = scanf(" %d", &choice2);
+            if (rc != 1) {
+                clr();
+            }
+            while(choice2 !=1 && choice2 !=2) {
+                printf("Please enter a 1 or 2");
+                rc = scanf("%d", &choice2);
+                    if (rc != 1) {
+                        clr();
+                    }
+            }
+            if (choice2==1) {
               printf("You keep venturing deeper into the jungle.\n");
               printf("In the distance you see a tree with what looks to be yellow fruit on it.\n");
               sleep(3);
@@ -119,7 +139,7 @@ rc = scanf("%d", &x);
               printf("left or right? (L or R)");
               rc=scanf(" %c", &choice2);
                 if (choice2=='L') {
-                  printf("You walk along the shore for 20 minutes and can't find you camp so you turn back.\n");
+                  printf("You walk along the shore for 20 minutes and can't find your camp so you turn back.\n");
                   tme(40);
                 }
                 else {
@@ -131,9 +151,19 @@ rc = scanf("%d", &x);
         else if (x==4) {
           printf("You cannot drink seawater so you make your way into the jungle to find freshwater.\n");
           sleep(2);
-          printf("Will you go left or right? (L or R)");
-          scanf("%s", &choice1);
-            if (choice1=='L') {
+          printf("Will you go left or right? (1. Left or 2. Right)");
+          rc = scanf("%d", &choice1);
+            if(rc != 1) {
+                clr();
+            }
+            while(choice1 != 1 && choice1 != 2) {
+                printf("Please enter a 1 or 2");
+                rc = scanf("%d", &choice1);
+                    if(rc != 1) {
+                        clr();
+                    }
+            }
+            if (choice1==1) {
               printf("As you make your way through the foliage you find a coconut tree.\n");
               sleep(3);
               printf("At the base you find an old coconut split in half. You can use this to collect a small amount of water.\n");
@@ -145,7 +175,7 @@ rc = scanf("%d", &x);
               printf("You fill up your coconut with water and head back to the beach.\n");
               tme(60);
             }
-            else if (choice1=='R'){
+            else if (choice1==2){
               printf("You find a small river and drink water until you're full.\n");
               thirst(100);
               printf("You head back to the beach");
