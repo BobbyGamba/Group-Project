@@ -87,6 +87,8 @@ rc = scanf("%d", &x);
             printf("You muster all your strength and begin building a shelter.\n");
             printf("The sun is getting lower in the sky.\n");
             sleep(2);
+              hunger(-15);
+              thirst(-20);
             tme(60);
             wood_index= wood_index-8;
             printf("You have %d pieces of wood left.\n", wood_index);
@@ -100,6 +102,8 @@ rc = scanf("%d", &x);
           printf("As you go deeper and deeper you begin to lose hope. Everything is unfamiliar, green, and inedible.\n");
           printf("What if there is no food for you here?\n");
           tme(30);
+            hunger(-5);
+            thirst(-8);
           sleep(4);
           printf("You find a grove of wild blackberries.\n");
           printf("Would you like to collect some? (1. Yes or 2. No)");
@@ -144,17 +148,23 @@ rc = scanf("%d", &x);
               tme(30);
             }
           printf("You head back to the beach with your bounty.\n");
+            hunger(-8);
+            thirst(-13);
           sleep(2);
             if (shelter==1) {
               printf("You can't find your camp.\n");
-              printf("left or right? (L or R)");
-              rc=scanf(" %c", &choice2);
-                if (choice2=='L') {
+              printf("left(1) or right(2)?");
+              rc=scanf(" %d", &x);
+                if (x==1) {
                   printf("You walk along the shore for 20 minutes and can't find your camp so you turn back.\n");
                   tme(40);
+                    hunger(-6);
+                    thirst(-3);
                 }
                 else {
                   printf("After 10 minutes of walking along the shore you find your shelter.\n");
+                    hunger(-2);
+                    thirst(-1);
                   tme(10);
                 }
             }
