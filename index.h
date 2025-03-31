@@ -21,4 +21,3 @@ int medicine;
 int hours;
 int knife;
 int container;
-int medicine;
