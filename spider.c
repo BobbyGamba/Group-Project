@@ -106,4 +106,7 @@ int spider(int shelter) {
             }
         printf("You wake up hours later. Your fever is gone and your body seems to have gotten over the spider bite.");
         tme(1080);
+                    }
+else {
+    tme();
 return 0;
