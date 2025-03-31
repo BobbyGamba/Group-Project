@@ -2,13 +2,13 @@
 #include <unistd.h>
 #include "index.h"
 /*Global Variables*/
-int banana_index=0;
+int banana_index=0, coconut_index=0, meat_index=0;
 void clr() {
     while ( getchar() != '\n' );
 }
 
 int main() {
-int x, i, rc, shelter = 0, bananas, coconuts;
+int x, i, rc, shelter = 0, bananas, coconuts, meat, difference;
 char y[30], choice1, choice2;
  
 /*FILE * f=fopen("island.txt","r"); 
@@ -255,7 +255,7 @@ while (hours<19) {
             clr();
         }
         while(choice1 != 1 && choice1 != 2 && choice1 != 3 && choice1 != 4) {
-            printf("Please enter a 1, 2, 3, or 4.\n")
+            printf("Please enter a 1, 2, 3, or 4.\n");
             rc = scanf("%d", &choice1);
             if(rc != 1) {
                 clr();
@@ -293,7 +293,7 @@ while (hours<19) {
             printf("3. Meat\n");
             rc = scanf("%d", &choice2);
             if(rc != 1) {
-                clr()l;
+                clr();
             }
             while(choice2 != 1 && choice2 != 2 && choice2 != 3) { 
                 printf("Please enter a 1, 2, or 3\n");
@@ -306,7 +306,7 @@ while (hours<19) {
                 printf("You find a coconut tree and climb.\n");
                 printf("How many coconuts do you want to take?\n ");
                 scanf("%d", &coconuts);
-                while(coconuts2 > 3) {
+                while(coconuts > 3) {
                     printf("You can't carry that many coconuts.\n");
                     scanf("%d", &coconuts);
                 }
@@ -409,14 +409,14 @@ while (hours<19) {
             clr();
         }
         while(choice1 != 1 && choice1 != 2 && choice1 != 3 && choice1 != 4) {
-            printf("Please enter a 1, 2, 3, or 4.\n")
+            printf("Please enter a 1, 2, 3, or 4.\n");
             rc = scanf("%d", &choice1);
             if(rc != 1) {
                 clr();
             }
         }
         if(choice1 == 1) {
-            collectingWood.c
+            collectingwood();
         }
         else if(choice1 == 2) {
             if(shelter == 1) {
@@ -445,7 +445,7 @@ while (hours<19) {
             printf("3. Meat\n");
             rc = scanf("%d", &choice2);
             if(rc != 1) {
-                clr()l;
+                clr();
             }
             while(choice2 != 1 && choice2 != 2 && choice2 != 3) { 
                 printf("Please enter a 1, 2, or 3\n");
