@@ -42,7 +42,7 @@ int spider(int shelter) {
                     }
             }
             if (banana_index>=1 || blackberries>=1) {
-                printf("You have %d bananas and %d blackberries.\n", bananas, blackberries);
+                printf("You have %d bananas and %d blackberries.\n", banana_index, blackberries);
                 printf("Would you like to replenish your hunger levels?(Yes=1 or No=2)");
                 rc= scanf("%d", &x1);
                     if (rc != 1) {
@@ -88,6 +88,7 @@ int spider(int shelter) {
                                             clr();
                                         }
                                 }
+                        banana_index= banana_index-x1;
                         h= x1*10;
                         hunger(h); 
                     }
