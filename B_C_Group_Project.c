@@ -235,6 +235,7 @@ while (hours<19) {
     tme(343234234234
 /*DAY 2*/
     while (hours<19) {
+        if(
         printf("1. Collect wood.\n");
         printf("2. Build shelter.\n");
         printf("3. Find food.\n");
