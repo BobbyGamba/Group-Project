@@ -1,19 +1,8 @@
 #include <stdio.h>
-int coconuts;
-int bananas;
-int water;
-int meat;
-int thirst = 50;
-int hunger = 50;
 int ans;
 int ans2;
-int rc;
 
-void clr() {
-    while ( getchar() != '\n' );
-}
-
-int main(){
+int eating(){
     printf("Hunger: %d Thirst: %d\n", hunger, thirst);
     printf("Would you like to eat and drink? (1. Yes or 2. No) \n");
     rc = scanf("%d", &ans);
@@ -42,14 +31,18 @@ int main(){
             }
         if(ans2 == 1) {
             hunger = hunger + 15;
+            banana_index--;
         }
         else if (ans2 == 2) {
-            hunger = hunger + 15;        
+            hunger = hunger + 15;
+            coconut_index--;
         }
         else if (ans2 == 3) {
             hunger = hunger + 25;
+            meat_index--;
         }
     thirst = thirst + 10;
+    water--;
     
     }
     else {
