@@ -13,6 +13,7 @@ int hours;
 int wood_index;
 int blackberries;
 int banana_index;
+int coconut_index;
 int water;
 int medicine;
 int hours;
