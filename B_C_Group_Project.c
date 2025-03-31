@@ -7,7 +7,7 @@ void clr() {
 }
 
 int main() {
-int x, i, rc, shelter = 0; bananas; coconuts;
+int x, i, rc, shelter = 0; bananas, coconuts;
 char y[30], choice1, choice2;
  
 /*FILE * f=fopen("island.txt","r"); 
