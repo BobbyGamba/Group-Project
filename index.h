@@ -12,7 +12,7 @@ int shelter;
 int hours;
 int wood_index;
 int blackberries;
-int bananas;
+int banana_index;
 int water;
 int medicine;
 int hours;
