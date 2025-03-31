@@ -458,7 +458,7 @@ while (hours<19) {
                 printf("You return to the coconut tree to get more coconuts.\n");
                 printf("How many coconuts do you want to take?\n ");
                 scanf("%d", &coconuts);
-                while(coconuts2 > 3) {
+                while(coconuts > 3) {
                     printf("You can't carry that many coconuts.\n");
                     scanf("%d", &coconuts);
                 }
