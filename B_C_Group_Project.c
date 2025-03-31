@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include "index.h"
 /*Global Variables*/
-int banana_index=0, coconut_index=0, meat_index=0;
+int banana_index=0, coconut_index=0, meat_index=0, water_index=0;
 void clr() {
     while ( getchar() != '\n' );
 }
