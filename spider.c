@@ -2,7 +2,7 @@
 #include "index.h"
 
 int spider(int shelter) {
-    int x1, x2, rc, rc1 t, h;
+    int x1, x2, rc, rc1, t, h;
     if(shelter == 0) {
         printf("In the middle of the night you feel a sharp pinch on your arm.");
         printf("Too tired to move you swipe at the pain and go back to sleep.");  
@@ -69,7 +69,7 @@ int spider(int shelter) {
                                     }
                              }
                             if (x2==1) {
-                                printf("The berries you thought were blackberries were actually poisonous.\n);
+                                printf("The berries you thought were blackberries were actually poisonous.\n");
                                 printf("You die.\n");
                                 printf("GAME OVER");
                                 /*END GAME*/
