@@ -224,6 +224,7 @@ while (hours<19) {
     printf("You're not alone on this island.");
     printf("And whatever is here with you... is massive\n");
     printf("Coming back to reality and the situation at hand, you plan your next move to survive.");
+    //DAY 2 
     while (hours<19) {
         printf("1. Collect wood.\n");
         printf("2. Build shelter.\n");
@@ -338,6 +339,7 @@ while (hours<19) {
     else {
         printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
     }
+    monster();
     
                 
                 
