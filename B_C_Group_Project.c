@@ -7,7 +7,7 @@ void clr() {
 }
 
 int main() {
-int x, i, rc, shelter = 0;
+int x, i, rc, shelter = 0; bananas; coconuts;
 char y[30], choice1, choice2;
  
 /*FILE * f=fopen("island.txt","r"); 
@@ -283,23 +283,24 @@ while (hours<19) {
             if(choice2 == 1) {
                 printf("You return to the coconut tree to get more coconuts.\n");
                 printf("How many coconuts do you want to take?\n ");
-                scanf("%d", &coconuts2);
+                scanf("%d", &coconuts);
                 while(coconuts2 > 3) {
                     printf("You can't carry that many coconuts.\n");
-                    scanf("%d", &coconuts2);
+                    scanf("%d", &coconuts);
                 }
-                printf("You have %d coconuts.\n", coconuts2);
+                printf("You have %d coconuts.\n", coconuts);
                 tme(30);
+                
             }
             if(choice2 == 2) {
                 printf("You return to the banana tree to get more bananas.\n");
                 printf("How many bananas do you want to take?\n");
-                scanf("%d", bananas2);
-                while(bananas2 > 5) {
+                scanf("%d", bananas);
+                while(bananas > 5) {
                     printf("You can't carry that many bananas.\n");
-                    scanf("%d", &bananas2);
+                    scanf("%d", &bananas);
                 }
-                printf("You have %d bananas.\n", bananas2);
+                printf("You have %d bananas.\n", bananas);
                 tme(30);
             }
             if(choice2 == 3) {
@@ -340,13 +341,147 @@ while (hours<19) {
         printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
     }
     monster();
-    
+    //DAY 3
+    printf("Waking up on your third day on the island, you've settled into your new life.\n");
+    printf("As the sun rises in the sky you set out, determined to conquer the island.\n");
+    while (hours<19) {
+        printf("1. Collect wood.\n");
+        printf("2. Build shelter.\n");
+        printf("3. Find food.\n");
+        printf("4. Find water.\n");
+        rc = scanf("%d", &choice1);
+        if (rc != 1) {
+            clr();
+        }
+        while(choice1 != 1 && choice1 != 2 && choice1 != 3 && choice1 != 4) {
+            printf("Please enter a 1, 2, 3, or 4.\n")
+            rc = scanf("%d", &choice1);
+            if(rc != 1) {
+                clr();
+            }
+        }
+        if(choice1 == 1) {
+            collectingWood.c
+        }
+        else if(choice1 == 2) {
+            if(shelter == 1) {
+                printf("You've already made a shelter\n");
+            }
+            else {
+                  if (wood_index<8) {
+                      printf("You do not have enough wood to build a shelter.\n"); 
+                      sleep(1);
+                  }
+                  else {
+                      printf("You muster all your strength and begin building a shelter.\n");
+                      printf("The sun is getting lower in the sky.\n");
+                      sleep(2);
+                      tme(60);
+                      wood_index= wood_index-8;
+                      printf("You have %d pieces of wood left.\n", wood_index);
+                      shelter+=1;
+                  }
+            }
+        }
+        else if (choice1 == 3) {
+            printf("What would you go like to find?\n");
+            printf("1. Coconuts\n");
+            printf("2. Bananas\n");
+            printf("3. Meat\n");
+            rc = scanf("%d", &choice2);
+            if(rc != 1) {
+                clr()l;
+            }
+            while(choice2 != 1 && choice2 != 2 && choice2 != 3) { 
+                printf("Please enter a 1, 2, or 3\n");
+                rc = scanf("%d", &choice2);
+                if(rc != 1) {
+                    clr();
+                }
+            }
+            if(choice2 == 1) {
+                printf("You return to the coconut tree to get more coconuts.\n");
+                printf("How many coconuts do you want to take?\n ");
+                scanf("%d", &coconuts);
+                while(coconuts2 > 3) {
+                    printf("You can't carry that many coconuts.\n");
+                    scanf("%d", &coconuts);
+                }
+                printf("You have %d coconuts.\n", coconuts);
+                tme(30);
                 
-                
-            
-        
-        
-        
+            }
+            if(choice2 == 2) {
+                printf("You return to the banana tree to get more bananas.\n");
+                printf("How many bananas do you want to take?\n");
+                scanf("%d", bananas);
+                while(bananas > 5) {
+                    printf("You can't carry that many bananas.\n");
+                    scanf("%d", &bananas);
+                }
+                printf("You have %d bananas.\n", bananas);
+                tme(30);
+            }
+            if(choice2 == 3) {
+                if(knife == 1) {
+                    printf("With your knife you venture into the jungle to hunt for food.\n");
+                    printf("You find a small pig and using your knife you kill it and harvest its meat.\n");
+                    meat+=5;
+                    tme(60);
+                }
+                else {
+                    printf("You venture into the jungle to hunt for food.\n");
+                    printf("You find a small pig but are unable to capture it and it flees.\n");
+                    printf("You try to give chase but the pig is too fast and it escapes further into the jungle.\n");
+                    tme(90);
+                }
+            }
+        }        
+        else if(choice1 == 4) {
+            if(container == 1) {
+                printf("You return to the river to collect water.\n");
+                printf("Using your container, you collect water and return to camp\n");
+                water+=2;
+                tme(30);
+            }
+            else {
+                printf("You return to the river to collect water.\n");
+                printf("Using your coconut shell, you collect water and return to camp.\n");
+                water++;
+                tme(15);
+            }
+        }
+    }
+    printf("The sun has set and exhaustion settles down upom you.\n");
+    if (shelter ==1 ) {
+        printf("You cuddle up under your makeshift shelter and let sleep overtake you.\n");
+    }
+    else {
+        printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
+    }
+    monster();
+    //DAY 4
+    printf("Waking up on the fourth day, you've begun to settle in to your new life.\n");
+    printf("You set out for the day determined to conquer this island.\n");
+    printf("As you leave your shelter you notice something on the horizon, a glint on the sea.\n");
+    printf("Hope fills your soul as you realize a ship is passing the island.\n");
+    printf("A chance for rescue has finally arrived!!!\n");
+    printf("In a hurried frenzy, you gather all the wood you have and try to make a signal fire to bring in the ship.\n");
+    if(wood_index >= 10) {
+        printf("As you pile more and more wood on the fire the flames grow bigger and bigger until it becomes a raging inferno.\n");
+        printf("Peering into the distance your heart jumps for joy as the ship slowy turns towards the island.\n");
+        printf("Tears of joy run down your face as a small boat departs from the ship and sailors row their boat towards you to return you to civilization and home.\n");
+        printf("Congratulations!!! You've survived the island and have been rescued.\n");
+        printf("Thanks for playing!!!");
+    }
+    else {     
+        printf("As you pile all the wood you have onto the fire you hold out hope for rescue.\n");
+        printf("But as the seconds turn to minutes, your hope fades away as the ship continues on its course and your fire burns out.\n");
+        printf("Despair fills your body and turns to terror as you hear a rustling in the bushes behind you.\n");
+        printf("You slowly turn around to face the horror that waits you.\n");
+        printf("Gnashing teeth and razor sharp teeth leap for you as the beast and its gaping jaws swallow you into darkness.\n");
+        printf("GAME OVER");
+    }
 return 0;
 }
   
