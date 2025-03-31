@@ -242,11 +242,11 @@ while (hours<19) {
             }
         }
         if(choice1 == 1) {
-            collectingWood.c
+            collectingWood();
         }
         else if(choice1 == 2) {
             if(shelter == 1) {
-                printf("You've already made a shelter\n");
+                printf("You've already made a shelter.\n");
             }
             else {
                   if (wood_index<8) {
@@ -341,74 +341,7 @@ while (hours<19) {
         printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
     }
     monster();
-    //DAY 3
-    printf("Waking up on your third day on the island, you've settled into your new life.\n");
-    printf("As the sun rises in the sky you set out, determined to conquer the island.\n");
-    while (hours<19) {
-        printf("1. Collect wood.\n");
-        printf("2. Build shelter.\n");
-        printf("3. Find food.\n");
-        printf("4. Find water.\n");
-        rc = scanf("%d", &choice1);
-        if (rc != 1) {
-            clr();
-        }
-        while(choice1 != 1 && choice1 != 2 && choice1 != 3 && choice1 != 4) {
-            printf("Please enter a 1, 2, 3, or 4.\n")
-            rc = scanf("%d", &choice1);
-            if(rc != 1) {
-                clr();
-            }
-        }
-        if(choice1 == 1) {
-            collectingWood.c
-        }
-        else if(choice1 == 2) {
-            if(shelter == 1) {
-                printf("You've already made a shelter\n");
-            }
-            else {
-                  if (wood_index<8) {
-                      printf("You do not have enough wood to build a shelter.\n"); 
-                      sleep(1);
-                  }
-                  else {
-                      printf("You muster all your strength and begin building a shelter.\n");
-                      printf("The sun is getting lower in the sky.\n");
-                      sleep(2);
-                      tme(60);
-                      wood_index= wood_index-8;
-                      printf("You have %d pieces of wood left.\n", wood_index);
-                      shelter+=1;
-                  }
-            }
-        }
-        else if (choice1 == 3) {
-            printf("What would you go like to find?\n");
-            printf("1. Coconuts\n");
-            printf("2. Bananas\n");
-            printf("3. Meat\n");
-            rc = scanf("%d", &choice2);
-            if(rc != 1) {
-                clr()l;
-            }
-            while(choice2 != 1 && choice2 != 2 && choice2 != 3) { 
-                printf("Please enter a 1, 2, or 3\n");
-                rc = scanf("%d", &choice2);
-                if(rc != 1) {
-                    clr();
-                }
-            }
-            if(choice2 == 1) {
-                printf("You return to the coconut tree to get more coconuts.\n");
-                printf("How many coconuts do you want to take?\n ");
-                scanf("%d", &coconuts);
-                while(coconuts2 > 3) {
-                    printf("You can't carry that many coconuts.\n");
-                    scanf("%d", &coconuts);
-                }
-                printf("You have %d coconuts.\n", coconuts);
-                tme(30);
+
                 
             }
             if(choice2 == 2) {
