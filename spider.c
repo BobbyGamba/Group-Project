@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "index.h"
 
 int spider(int shelter) {
@@ -73,7 +74,7 @@ int spider(int shelter) {
                                 printf("You die.\n");
                                 printf("GAME OVER");
                                 /*END GAME*/
-                                /*exit(EXIT_SUCCESS);*/
+                                exit(0);
                             }
                             else if (x2==2) {
                                 printf("How many would you like to eat?");
