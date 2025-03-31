@@ -272,7 +272,7 @@ while (hours<19) {
             }
         }
         if(choice1 == 1) {
-            collectingWood();
+            collectingwood();
         }
         else if(choice1 == 2) {
             if(shelter == 1) {
