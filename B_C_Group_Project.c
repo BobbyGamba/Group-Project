@@ -242,11 +242,11 @@ while (hours<19) {
             }
         }
         if(choice1 == 1) {
-            collectingWood.c
+            collectingWood();
         }
         else if(choice1 == 2) {
             if(shelter == 1) {
-                printf("You've already made a shelter\n");
+                printf("You've already made a shelter.\n");
             }
             else {
                   if (wood_index<8) {
