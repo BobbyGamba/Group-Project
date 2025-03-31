@@ -340,6 +340,28 @@ while (hours<19) {
         printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
     }
     monster();
+    /*Day 3*/
+    printf("You wake later to the sounds of raindrops hitting your makeshift shelter.\n");
+    printf("You hear the wind howling outside and try to retreat further in the shelter, away from the water at the entrance.\n");
+    sleep(3);
+    printf("The night goes on and the rain gets heavier and heavier.\n");
+    tme(); //8 am or soemthing
+    printf("You see dim light from the dawn sun filter through your shelter.\n");
+    sleep(3);
+    printf("The rain has stopped. YOu walk out of your shelter to see the damage.\n");
+    printf("Broken branches are strewn across the beach and fallen trees.\n");
+    sleep(3);
+    printf("All the sudden you hear a snap behind you. You whip around just in time to see your shelter collapse.\n");
+    shelter--;
+    printf("You fall to your knees in anguish. All the time you spent building your shelter is wasted.\n");
+    printf("You sit there in shock, unable to believe what has just happened.");
+    tme(15);
+        
+    
+    
+    
+    
+    
     
                 
                 
