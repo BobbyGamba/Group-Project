@@ -32,7 +32,7 @@ int spider(int shelter) {
                                 clr();
                             }
                              while (x2>water || x2 != 1 && x2 !=2) {
-                                printf("Please enter a valid number no greater than your water supply.");
+                                printf("Please enter a valid number no greater than your banana supply.");
                                  rc = scanf("%d", &x2);
                                     if (rc1 != 1) {
                                         clr();
