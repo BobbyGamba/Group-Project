@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "index.h"
-
+/*Global Variables*/
+int banana_index=0;
 void clr() {
     while ( getchar() != '\n' );
 }
@@ -146,7 +147,13 @@ while (hours<19) {
             tme(20);
             printf("How many would you like to collect?");
             scanf("%d", &bananas);
+            while(bananas > 5) {
+                    difference= bananas-5;
+                    printf("You can't carry that many bananas, you drop %d.\n", difference);
+                    bananas=5;
+                }
             tme(30);
+            banana_index= banana_index+bananas;
         }
         printf("You head back to the beach with your bounty.\n");
         hunger(-8);
@@ -303,10 +310,11 @@ while (hours<19) {
                 printf("How many bananas do you want to take?\n");
                 scanf("%d", bananas);
                 while(bananas > 5) {
-                    printf("You can't carry that many bananas.\n");
-                    scanf("%d", &bananas);
+                    difference= bananas-5;
+                    printf("You can't carry that many bananas, you drop %d.\n", difference);
+                    bananas=5;
                 }
-                printf("You have %d bananas.\n", bananas);
+                banana_index= banana_index+bananas;
                 hunger(-15);
                 thirst(-15);
                 tme(30);
@@ -448,10 +456,11 @@ while (hours<19) {
                 printf("How many bananas do you want to take?\n");
                 scanf("%d", bananas);
                 while(bananas > 5) {
-                    printf("You can't carry that many bananas.\n");
-                    scanf("%d", &bananas);
+                    difference= bananas-5;
+                    printf("You can't carry that many bananas, you drop %d.\n", difference);
+                    bananas=5;
                 }
-                printf("You have %d bananas.\n", bananas);
+                banana_index= banana_index+bananas;
                 hunger(-15);
                 thirst(-15);
                 tme(30);
