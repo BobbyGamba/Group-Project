@@ -16,6 +16,7 @@ char y[30], choice1, choice2;
         printf("%s\n", y);
     }
     */
+//DAY 1    
 printf("You awaken to the sounds of waves crashing on the beach.\n");
 printf("The water splashes on your face as the waves effortlessly throw you onto the shore.\n");
 sleep(4);
