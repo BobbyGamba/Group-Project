@@ -73,7 +73,7 @@ int spider(int shelter) {
                                 printf("You die.\n");
                                 printf("GAME OVER");
                                 /*END GAME*/
-                                exit(EXIT_SUCCESS);
+                                /*exit(EXIT_SUCCESS);*/
                             }
                             else if (x2==2) {
                                 printf("How many would you like to eat?");
