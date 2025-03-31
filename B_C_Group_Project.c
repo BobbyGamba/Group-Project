@@ -16,7 +16,7 @@ char y[30], choice1, choice2;
         printf("%s\n", y);
     }
     */
-//DAY 1    
+/*DAY 1 */
 printf("You awaken to the sounds of waves crashing on the beach.\n");
 printf("The water splashes on your face as the waves effortlessly throw you onto the shore.\n");
 sleep(4);
@@ -226,7 +226,7 @@ while (hours<19) {
     printf("And whatever is here with you... is massive\n");
     printf("Coming back to reality and the situation at hand, you plan your next move to survive.");
     tme(343234234234
-    //DAY 2 
+/*DAY 2*/
     while (hours<19) {
         printf("1. Collect wood.\n");
         printf("2. Build shelter.\n");
@@ -357,13 +357,12 @@ while (hours<19) {
         printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
     }
     monster();
-<<<<<<< BobbyGamba-patch-2
-    //DAY 3
+    /*DAY 3*/
      printf("You wake later to the sounds of raindrops hitting your makeshift shelter.\n");
     printf("You hear the wind howling outside and try to retreat further in the shelter, away from the water at the entrance.\n");
     sleep(3);
     printf("The night goes on and the rain gets heavier and heavier.\n");
-    tme(); //8 am or soemthing
+    tme(900);
     printf("You see dim light from the dawn sun filter through your shelter.\n");
     sleep(3);
     printf("The rain has stopped. YOu walk out of your shelter to see the damage.\n");
@@ -503,7 +502,7 @@ while (hours<19) {
         printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
     }
     monster();
-    //DAY 4
+    /*DAY 4*/
     printf("Waking up on the fourth day, you've begun to settle in to your new life.\n");
     printf("You set out for the day determined to conquer this island.\n");
     printf("As you leave your shelter you notice something on the horizon, a glint on the sea.\n");
