@@ -105,6 +105,5 @@ int spider(int shelter) {
                 hunger(15);
             }
         printf("You wake up hours later. Your fever is gone and your body seems to have gotten over the spider bite.");
-        hours= 11;
-        tme(0);
+        tme(1080);
 return 0;
