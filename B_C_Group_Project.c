@@ -239,13 +239,13 @@ while (hours<19) {
     printf("And whatever is here with you... is massive\n");
     printf("Coming back to reality and the situation at hand, you plan your next move to survive.");
 /*DAY 2*/
-    while (hours<19) {
+    while (hours < 19) {
         if(hours>=14 && hours<=15) {
         eating();
-    }
-    else if(hours>=17 && hours<=18) {
+        }
+        else if(hours>=17 && hours<=18) {
         eating();
-    }
+        }
         printf("1. Collect wood.\n");
         printf("2. Build shelter.\n");
         printf("3. Find food.\n");
