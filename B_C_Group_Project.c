@@ -62,6 +62,12 @@ printf("You look off into the horizon and try to guess what time of day it is. W
 printf("You only have a few hours before sunset at 19:00.\n");
 sleep(4);
 while (hours<19) {
+    if(hours>=16 && hours<=17) {
+        eating();
+    }
+    else if (hours>=19 && hours<=20) {
+        eating();
+    }
     printf("1. Collect wood\n");
     printf("2. Build a shelter\n");
     printf("3. Find food\n");
@@ -232,9 +238,14 @@ while (hours<19) {
     printf("You're not alone on this island.");
     printf("And whatever is here with you... is massive\n");
     printf("Coming back to reality and the situation at hand, you plan your next move to survive.");
-    tme(343234234234
 /*DAY 2*/
     while (hours<19) {
+        if(hours>=14 && hours<=15) {
+        eating();
+    }
+    else if(hours>=17 && hours<=18) {
+        eating();
+    }
         printf("1. Collect wood.\n");
         printf("2. Build shelter.\n");
         printf("3. Find food.\n");
@@ -383,6 +394,12 @@ while (hours<19) {
     tme(15);
     sleep(3);
     while (hours<19) {
+            if(hours>=14 && hours<=15) {
+        eating();
+    }
+    else if(hours>=17 && hours<=18) {
+        eating();
+    }
         printf("1. Collect wood.\n");
         printf("2. Build shelter.\n");
         printf("3. Find food.\n");
