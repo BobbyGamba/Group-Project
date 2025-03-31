@@ -248,7 +248,7 @@ while (hours<19) {
             printf("You've already made a shelter\n");
         }
         else {
-        if (wood_index<8) {
+          if (wood_index<8) {
             printf("You do not have enough wood to build a shelter.\n"); 
               sleep(1);
           }
@@ -264,23 +264,83 @@ while (hours<19) {
         }
     }
     else if (choice1 == 3) {
-        printf("What would you go like to find?");
-        printf("1. Coconuts");
-        printf("2. Bananas");
-        printf("3. Meat");
+        printf("What would you go like to find?\n");
+        printf("1. Coconuts\n");
+        printf("2. Bananas\n");
+        printf("3. Meat\n");
         rc = scanf("%d", &choice2);
             if(rc != 1) {
                 clr()l;
             }
         while(choice2 != 1 && choice2 != 2 && choice2 != 3) { 
-            printf("Please enter a 1, 2, or 3");
+            printf("Please enter a 1, 2, or 3\n");
             rc = scanf("%d", &choice2);
                 if(rc != 1) {
                     clr();
                 }
         }
         if(choice2 == 1) {
-            printf("You return to the coconut tree
+            printf("You return to the coconut tree to get more coconuts.\n");
+            printf("How many coconuts do you want to take?\n ");
+            scanf("%d", &coconuts2);
+            while(coconuts2 > 3) {
+                printf("You can't carry that many coconuts.\n");
+                scanf("%d", &coconuts2);
+            }
+            printf("You have %d coconuts.\n", coconuts2);
+            tme(30);
+        }
+        if(choice2 == 2) {
+            printf("You return to the banana tree to get more bananas.\n");
+            printf("How many bananas do you want to take?\n");
+            scanf("%d", bananas2);
+            while(bananas2 > 5) {
+                printf("You can't carry that many bananas.\n");
+                scanf("%d", &bananas2);
+            }
+            printf("You have %d bananas.\n", bananas2);
+            tme(30);
+        }
+        if(choice2 == 3) {
+            if(knife == 1) {
+                printf("With your knife you venture into the jungle to hunt for food.\n");
+                printf("You find a small pig and using your knife you kill it and harvest its meat.\n");
+                meat+=5;
+                tme(60);
+            }
+            else {
+                printf("You venture into the jungle to hunt for food.\n");
+                printf("You find a small pig but are unable to capture it and it flees.\n");
+                printf("You try to give chase but the pig is too fast and it escapes further into the jungle.\n");
+                tme(90);
+            }
+        }
+    }        
+    else if(choice1 == 4) {
+        if(container == 1) {
+            printf("You return to the river to collect water.\n");
+            printf("Using your container, you collect water and return to camp\n");
+            water+=2;
+            tme(30);
+        }
+        else {
+            printf("You return to the river to collect water.\n");
+            printf("Using your coconut shell, you collect water and return to camp.\n");
+            water++;
+            tme(15);
+        }
+    }
+}
+printf("The sun has set and exhaustion settles down upom you.\n");
+    if (shelter==1){
+        printf("You cuddle up under your makeshift shelter and let sleep overtake you.\n");
+    }
+    else {
+        printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
+    }                
+                
+                
+            
         
         
         
