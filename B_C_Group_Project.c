@@ -259,6 +259,8 @@ while (hours<19) {
                       printf("You muster all your strength and begin building a shelter.\n");
                       printf("The sun is getting lower in the sky.\n");
                       sleep(2);
+                      hunger(-15);
+                      thirst(-20);
                       tme(60);
                       wood_index= wood_index-8;
                       printf("You have %d pieces of wood left.\n", wood_index);
@@ -283,7 +285,7 @@ while (hours<19) {
                 }
             }
             if(choice2 == 1) {
-                printf("You return to the coconut tree to get more coconuts.\n");
+                printf("You find a coconut tree and climb.\n");
                 printf("How many coconuts do you want to take?\n ");
                 scanf("%d", &coconuts);
                 while(coconuts2 > 3) {
@@ -291,6 +293,8 @@ while (hours<19) {
                     scanf("%d", &coconuts);
                 }
                 printf("You have %d coconuts.\n", coconuts);
+                hunger(-15);
+                thirst(-15);
                 tme(30);
                 
             }
@@ -303,6 +307,8 @@ while (hours<19) {
                     scanf("%d", &bananas);
                 }
                 printf("You have %d bananas.\n", bananas);
+                hunger(-15);
+                thirst(-15);
                 tme(30);
             }
             if(choice2 == 3) {
@@ -310,12 +316,16 @@ while (hours<19) {
                     printf("With your knife you venture into the jungle to hunt for food.\n");
                     printf("You find a small pig and using your knife you kill it and harvest its meat.\n");
                     meat+=5;
+                    hunger(-20);
+                    thirst(-20);
                     tme(60);
                 }
                 else {
                     printf("You venture into the jungle to hunt for food.\n");
                     printf("You find a small pig but are unable to capture it and it flees.\n");
                     printf("You try to give chase but the pig is too fast and it escapes further into the jungle.\n");
+                    hunger(-25);
+                    thirst(-25);
                     tme(90);
                 }
             }
@@ -325,12 +335,16 @@ while (hours<19) {
                 printf("You return to the river to collect water.\n");
                 printf("Using your container, you collect water and return to camp\n");
                 water+=2;
+                hunger(-10);
+                thirst(-10);
                 tme(30);
             }
             else {
                 printf("You return to the river to collect water.\n");
                 printf("Using your coconut shell, you collect water and return to camp.\n");
                 water++;
+                hunger(-10);
+                thirst(-10);
                 tme(15);
             }
         }
@@ -425,6 +439,8 @@ while (hours<19) {
                     scanf("%d", &coconuts);
                 }
                 printf("You have %d coconuts.\n", coconuts);
+                hunger(-15);
+                thirst(-15);
                 tme(30);
                 
             }
@@ -437,6 +453,8 @@ while (hours<19) {
                     scanf("%d", &bananas);
                 }
                 printf("You have %d bananas.\n", bananas);
+                hunger(-15);
+                thirst(-15);
                 tme(30);
             }
             if(choice2 == 3) {
@@ -444,12 +462,16 @@ while (hours<19) {
                     printf("With your knife you venture into the jungle to hunt for food.\n");
                     printf("You find a small pig and using your knife you kill it and harvest its meat.\n");
                     meat+=5;
+                    hunger(-20);
+                    thirst(-20);
                     tme(60);
                 }
                 else {
                     printf("You venture into the jungle to hunt for food.\n");
                     printf("You find a small pig but are unable to capture it and it flees.\n");
                     printf("You try to give chase but the pig is too fast and it escapes further into the jungle.\n");
+                    hunger(-25);
+                    thirst(-25);
                     tme(90);
                 }
             }
@@ -459,12 +481,16 @@ while (hours<19) {
                 printf("You return to the river to collect water.\n");
                 printf("Using your container, you collect water and return to camp\n");
                 water+=2;
+                hunger(-10);
+                thirst(-10);
                 tme(30);
             }
             else {
                 printf("You return to the river to collect water.\n");
                 printf("Using your coconut shell, you collect water and return to camp.\n");
                 water++;
+                hunger(-10);
+                thirst(-10);
                 tme(15);
             }
         }
