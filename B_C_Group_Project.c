@@ -380,7 +380,6 @@ int main() {
       } 
       else if (choice2 == 2) {
         printf("You return to the banana tree to get more bananas.\n");
-      }
       while (1) {
         printf("How many bananas do you want to take?\n");
         rc = scanf("%d", &bananas);
@@ -401,6 +400,7 @@ int main() {
       hunger(-15);
       thirst(-15);
       tme(30);
+      }
       else if (choice2 == 3) {  
         if (knife == 1) {
           printf("With your knife, you venture into the jungle to hunt for food.\n");
@@ -410,14 +410,14 @@ int main() {
           thirst(-20);
           tme(60);
         }
-      } 
-      else {
-        printf("You venture into the jungle to hunt for food.\n");
-        printf("You find a small pig but are unable to capture it, and it flees.\n");
-        printf("You try to give chase, but the pig is too fast and escapes further into the jungle.\n");
-        hunger(-25);
-        thirst(-25);
-        tme(90);
+        else {
+          printf("You venture into the jungle to hunt for food.\n");
+          printf("You find a small pig but are unable to capture it, and it flees.\n");
+          printf("You try to give chase, but the pig is too fast and escapes further into the jungle.\n");
+          hunger(-25);
+          thirst(-25);
+          tme(90);
+        }
       }
     }
     else if (choice1 == 4) {  
