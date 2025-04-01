@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "index.h"
+
 /*Global Variables*/
- int t_index=100;
- int h_index=100;
+int t_index=100;
+int h_index=100;
 
 /*Thirst levels function*/
 int thirst(int thr) {
