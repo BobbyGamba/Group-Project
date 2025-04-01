@@ -431,31 +431,26 @@ while (hours < 19) {
             printf("You return to the river to collect water.\n");
             thirst(50);
             printf("Using your container, you collect water and return to camp.\n");
-            
+            water_index += 2;
             if (coconut_shell == 1) {
                 printf("You also use your coconut shell to fill up water.\n");
                 water_index += 1;
             }
-
-            water_index += 2;
             hunger(-10);
-            thirst(-10);
             tme(30);
-
-        } else if (coconut_shell == 1) {
+        }
+        else if (coconut_shell == 1) {
             printf("You return to the river to collect water.\n");
             thirst(50);
             printf("Using your coconut shell, you collect water and return to camp.\n");
             water_index += 2;
             hunger(-10);
-            thirst(-10);
             tme(30);
 
         } else {
             printf("You return to the river to get water.\n");
             thirst(50);
             printf("You drink until you're full and return to camp.\n");
-            hunger(-10);
             tme(15);
         }
     }
@@ -486,6 +481,9 @@ if (shelter == 1) {
     printf("You sit there in shock, unable to believe what has just happened.");
     tme(15);
     sleep(3);
+    printf("You walk over to your wood supply and find it drenched, useless for a shelter or a fire.\n");
+    printf("You discard it all.\n");
+    wood_index=0;
     while (hours<19) {
             if(hours>=14 && hours<=15) {
         eating();
@@ -614,23 +612,33 @@ if (shelter == 1) {
             }
         }        
         else if(choice1 == 4) {
-            if(container == 1) {
-                printf("You return to the river to collect water.\n");
-                printf("Using your container, you collect water and return to camp\n");
-                water+=2;
-                hunger(-10);
-                thirst(-10);
-                tme(30);
+             if (container == 1) {
+            printf("You return to the river to collect water.\n");
+            thirst(50);
+            printf("Using your container, you collect water and return to camp.\n");
+            water_index += 2;
+            if (coconut_shell == 1) {
+                printf("You also use your coconut shell to fill up water.\n");
+                water_index += 1;
             }
-            else {
-                printf("You return to the river to collect water.\n");
-                printf("Using your coconut shell, you collect water and return to camp.\n");
-                water++;
-                hunger(-10);
-                thirst(-10);
-                tme(15);
-            }
+            hunger(-10);
+            tme(30);
         }
+        else if (coconut_shell == 1) {
+            printf("You return to the river to collect water.\n");
+            thirst(50);
+            printf("Using your coconut shell, you collect water and return to camp.\n");
+            water_index += 2;
+            hunger(-10);
+            tme(30);
+        }
+        else {
+            printf("You return to the river to get water.\n");
+            thirst(50);
+            printf("You drink until you're full and return to camp.\n");
+            tme(15);
+        }
+    }
     }
     printf("The sun has set and exhaustion settles down upom you.\n");
     if (shelter ==1 ) {
