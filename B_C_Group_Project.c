@@ -456,7 +456,6 @@ while (hours < 19) {
             thirst(50);
             printf("You drink until you're full and return to camp.\n");
             hunger(-10);
-            thirst(-10);
             tme(15);
         }
     }
