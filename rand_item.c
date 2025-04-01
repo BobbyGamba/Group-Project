@@ -29,4 +29,4 @@ int rand_item() {
   }
 
 return 0;
-}  
+}   
