@@ -380,7 +380,7 @@ int main() {
       } 
       else if (choice2 == 2) {
         printf("You return to the banana tree to get more bananas.\n");
-      while (1) {
+        while (1) {
         printf("How many bananas do you want to take?\n");
         rc = scanf("%d", &bananas);
         if (rc == 1 && bananas >= 0) {
@@ -410,14 +410,14 @@ int main() {
           thirst(-20);
           tme(60);
         }
-        else {
-          printf("You venture into the jungle to hunt for food.\n");
-          printf("You find a small pig but are unable to capture it, and it flees.\n");
-          printf("You try to give chase, but the pig is too fast and escapes further into the jungle.\n");
-          hunger(-25);
-          thirst(-25);
-          tme(90);
-        }
+      } 
+      else {
+        printf("You venture into the jungle to hunt for food.\n");
+        printf("You find a small pig but are unable to capture it, and it flees.\n");
+        printf("You try to give chase, but the pig is too fast and escapes further into the jungle.\n");
+        hunger(-25);
+        thirst(-25);
+        tme(90);
       }
     }
     else if (choice1 == 4) {  
@@ -452,15 +452,15 @@ int main() {
         tme(15);
       }
     }
-  }
-  printf("The sun has set, and exhaustion settles upon you.\n");
-  if (shelter == 1) {
-    printf("You cuddle up under your makeshift shelter and let sleep overtake you.\n");
-  } 
-  else {
-    printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
-  }
-  monster();
+   }
+   printf("The sun has set, and exhaustion settles upon you.\n");
+   if (shelter == 1) {
+     printf("You cuddle up under your makeshift shelter and let sleep overtake you.\n");
+   } 
+   else {
+     printf("With no shelter, you decide to lay down under a tree to sleep until morning comes.\n");
+   }
+   monster();
 /*DAY 3*/
   printf("You wake later to the sounds of raindrops hitting your makeshift shelter.\n");
   printf("You hear the wind howling outside and try to retreat further in the shelter, away from the water at the entrance.\n");
